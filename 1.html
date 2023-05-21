@@ -1,25 +1,40 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Username Input</title>
-  </head>
-  <body>
-    <!-- Display a message to the user -->
-    <p>Enter your name (name cannot contain digits):</p>
-    <!-- Create an input field for the user to enter their name -->
-    <!-- Use the onkeypress event to call the checkInput function when a key is pressed -->
-    <input type="text" id="username" onkeypress="checkInput(event)" />
-    <script>
-      // Define the checkInput function
-      function checkInput(event) {
-        // Get the character that was entered
-        let char = event.key;
-        // Check if the character is a number
-        if (char >= "0" && char <= "9") {
-          // If it is a number, prevent it from being displayed in the text field
-          event.preventDefault();
-        }
-      }
-    </script>
-  </body>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Username Input</title>
+	<style>
+		/* Center the content on the page */
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Display a message to the user -->
+	<label for="username">Enter your name (name cannot contain digits):</label><br />
+	<!-- Create an input field for the user to enter their name -->
+	<!-- Use the onkeypress event to call the checkInput function when a key is pressed -->
+	<input type="text" id="username" onkeypress="checkInput(event)" />
+	<script>
+		// Define the checkInput function
+		function checkInput(event) {
+			// Get the character that was entered
+			let char = event.key;
+			// Check if the character is a number
+			if (char >= "0" && char <= "9") {
+				// If it is a number, prevent it from being displayed in the text field
+				event.preventDefault();
+			}
+		}
+	</script>
+</body>
+
 </html>
